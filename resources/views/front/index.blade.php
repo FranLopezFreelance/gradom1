@@ -30,7 +30,7 @@
 </div>
 <!-- ./Slide show -->
 <!-- promotions -->
-<div class="margin-top-60">
+<!-- <div class="margin-top-60">
   <div class="container">
     <div class="row margin-0">
       <div class="col-sm-12 col-md-4 padding-0 wow fadeInLeft">
@@ -65,7 +65,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 <!-- ./promotions -->
 <div class="row margin-0">
   <!-- <div class="col-sm-6 padding-0">

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Product;
 use App\Section;
 use App\SlideImage;
 
@@ -26,12 +27,14 @@ class FrontController extends Controller
 
     public function section(Section $section){
       $sections = Section::all();
-      return view('front.section', compact('section', 'sections'));
+      $slideImages = $section->images;
+      return view('front.section', compact('section', 'sections', 'slideImages'));
     }
 
     public function news(){
       $sections = Section::all();
-      return view('front.news', compact('section', 'sections'));
+      $products = Product::where('new', 1)->get();
+      return view('front.news', compact('sections', 'products'));
     }
 
     public function contact(){

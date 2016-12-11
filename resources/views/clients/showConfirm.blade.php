@@ -1,10 +1,16 @@
 @extends('layouts.head-clients')
 
 @section('content')
-				</div>
+				<ul class="kt-nav main-menu clone-main-menu">
+					<li>
+						<h3>Total: $ <span class="totalOrderNav_{{ $order->id }}">{{ $order->total() }}</span>
+						</h3>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</div>
+</div>
 	<div class="main-container left-sidebar">
 		<div class="container">
 			<div class="row">

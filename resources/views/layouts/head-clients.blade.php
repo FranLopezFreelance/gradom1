@@ -33,13 +33,13 @@
 			<div class="container">
 				<div class="top-bar-left">
 					<div class="logo">
-						<a href="/"><img height="70px" src="/images/logos/1.jpg" alt=""></a>
+						<a href="/"><img height="110px" src="/images/logos/1.jpg" alt=""></a>
 					</div>
 					<div class="form-search-wapper">
-						<form class="form-search">
+						<!-- <form class="form-search">
 							<input class="input" type="text" placeholder="Search entire store here...">
 							<button class="btn-search"><span class="flaticon-magnifying-glass34"></span></button>
-						</form>
+						</form> -->
 					</div>
 				</div>
 				<div class="top-bar-right">
@@ -48,10 +48,12 @@
 							@if(Auth::guest())
 								<a href="/login"><span class="menu-icon glyphicon glyphicon-user"> Acceso Mayoristas</span></a>
 							@else
-								<a href="/login"><span class="menu-icon glyphicon glyphicon-user"> {{ Auth::user()->name }}</span></a>
+								<a href="/"><span class="menu-icon glyphicon glyphicon-user"> {{ Auth::user()->name }}</span></a>
 								<ul class="sub-menu">
 									@if(Auth::user()->usertype_id == 1)
 										<li><a href="/order/newOrder/1"><span class="glyphicon glyphicon-paste"></span> Nuevo Pedido</a></li>
+									@else
+										<li><a href="/backend/products/1"><span class="glyphicon glyphicon-user"></span> Administrar</a></li>
 									@endif
 									<li><a href="/orderConfirm/pendingOrders"><span class="glyphicon glyphicon-book"></span> Pendientes</a></li>
 									<li><a href="/orderConfirm/deliveredOrders"><span class="glyphicon glyphicon-saved"></span> Entregados</a></li>

@@ -10,12 +10,12 @@
   </div>
   <div class="page-banner bg-parallax"></div>
   <div class="heading-section style2 text-center margin-top-50 margin-bottom-20" >
-    <h3 class="title">OUR TEAM</h3>
-    <span class="subtitle">Welcome to Lucky - Beautiful Creative Ecommerce Template!</span>
+    <h3 class="title">GRADOM</h3>
+    <span class="subtitle">Accesorios de Belleza</span>
   </div>
   <div class="section-team">
     <div class="container">
-      <div class="owl-carousel nav-center nav-style-2" data-loop="true" data-nav="true" data-dots="false" data-margin="30" data-responsive='{"0":{"items":"1"},"768":{"items":"3"},"992":{"items":"4"}}'>
+      <!-- <div class="owl-carousel nav-center nav-style-2" data-loop="true" data-nav="true" data-dots="false" data-margin="30" data-responsive='{"0":{"items":"1"},"768":{"items":"3"},"992":{"items":"4"}}'>
         <div class="team-item">
           <div class="team">
             <div class="content">
@@ -79,14 +79,14 @@
                         </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
   <div class="section-testimonials">
     <div class="container">
       <div class="heading-section style2 text-center" >
-        <h3 class="title">OUR CLIENTS SAY</h3>
+        <h3 class="title">NUESTROS CLIENTES DICEN...</h3>
       </div>
       <div class="testimonials owl-carousel nav-center nav-style-3" data-loop="true" data-nav="true" data-dots="false" data-items="1" data-autoplay="true">
         <div class="testimonial">

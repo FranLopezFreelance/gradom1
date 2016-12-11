@@ -18,6 +18,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic,300italic,300,700italic,900,900italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<link rel="stylesheet" type="text/css" href="/css/color.css">
+	<link rel="stylesheet" type="text/css" href="/css/others.css">
 </head>
 <body class="home">
 <div id="box-mobile-menu" class="full-height full-width box-mobile-menu">
@@ -32,13 +33,13 @@
 			<div class="container">
 				<div class="top-bar-left">
 					<div class="logo">
-						<a href="index.html"><img height="70px" src="/images/logos/1.jpg" alt=""></a>
+						<a href="/"><img height="120px" src="/images/logos/1.jpg" alt=""></a>
 					</div>
 					<div class="form-search-wapper">
-						<form class="form-search">
-							<input class="input" type="text" placeholder="Search entire store here...">
+						<!-- <form class="form-search">
+							<input class="input" type="text" placeholder="Buscar...">
 							<button class="btn-search"><span class="flaticon-magnifying-glass34"></span></button>
-						</form>
+						</form> -->
 					</div>
 				</div>
 				<div class="top-bar-right">
@@ -47,10 +48,12 @@
 							@if(Auth::guest())
 								<a href="/login"><span class="menu-icon glyphicon glyphicon-user"> Acceso Mayoristas</span></a>
 							@else
-								<a href="/login"><span class="menu-icon glyphicon glyphicon-user"> {{ Auth::user()->name }}</span></a>
+								<a href="/"><span class="menu-icon glyphicon glyphicon-user"> {{ Auth::user()->name }}</span></a>
 								<ul class="sub-menu">
 									@if(Auth::user()->usertype_id == 1)
 										<li><a href="/order/newOrder/1"><span class="glyphicon glyphicon-paste"></span> Nuevo Pedido</a></li>
+									@else
+										<li><a href="/backend/products/1"><span class="glyphicon glyphicon-user"></span> Administrar</a></li>
 									@endif
 									<li><a href="/orderConfirm/pendingOrders"><span class="glyphicon glyphicon-book"></span> Pendientes</a></li>
 									<li><a href="/orderConfirm/deliveredOrders"><span class="glyphicon glyphicon-saved"></span> Entregados</a></li>
@@ -99,45 +102,38 @@
   <footer class="footer">
     <div class="container">
       <div class="row">
-        <div class="col-sm-3">
+        <div class="col-sm-4">
           <div class="widget">
-            <h3 class="widget-title">ABOUT US</h3>
+            <h3 class="widget-title">SECCIONES</h3>
             <ul>
-              <li><a href="#">Support Center</a></li>
-              <li><a href="#">Customer Support</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Copyright</a></li>
-              <li><a href="#">Popular Campaign</a></li>
+              <li><a href="#">HOME</a></li>
+	              <li><a href="#">QUIENES SOMOS</a></li>
+              <li><a href="#">NOVEDADES</a></li>
+              <li><a href="#">CONTACTO</a></li>
             </ul>
           </div>
         </div>
-        <div class="col-sm-3">
+        <div class="col-sm-4">
           <div class="widget">
-            <h3 class="widget-title">OUR INFORMATION</h3>
+            <h3 class="widget-title">MI CUENTA</h3>
             <ul>
-              <li><a href="#">Return Policy</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms & Conditions</a></li>
-              <li><a href="#">Site Map</a></li>
-              <li><a href="#">Store Hours</a></li>
+							@if(Auth::guest())
+								<li><a href="/login">Acceso Mayoristas</span></a></li>
+							@else
+									@if(Auth::user()->usertype_id == 1)
+										<li><a href="/order/newOrder/1">Nuevo Pedido</a></li>
+									@else
+										<li><a href="/backend/products/1">Administrar</a></li>
+									@endif
+								<li><a href="/orderConfirm/pendingOrders">Pendientes</a></li>
+								<li><a href="/orderConfirm/deliveredOrders">Entregados</a></li>
+							@endif
             </ul>
           </div>
         </div>
-        <div class="col-sm-3">
-          <div class="widget">
-            <h3 class="widget-title">MY ACCOUNT</h3>
-            <ul>
-              <li><a href="#">Order Status</a></li>
-              <li><a href="#">Shipping and Delivery</a></li>
-              <li><a href="#">Returns</a></li>
-              <li><a href="#">Payment Options</a></li>
-              <li><a href="#">Contact Us</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-sm-3">
+        <div class="col-sm-4">
           <div class="widget widget_instagram">
-            <h3 class="widget-title">OUR INSTAGRAM</h3>
+            <h3 class="widget-title">INSTAGRAM</h3>
             <div class="list-image">
               <div class="item"><a href="#"><img src="/images/instagrams/1.png" alt=""></a></div>
               <div class="item"><a href="#"><img src="/images/instagrams/2.png" alt=""></a></div>
@@ -155,11 +151,11 @@
             <div class="coppyright">GRADOM - {{ date('Y') }}. Todos los derechos reservados.</div>
           </div>
           <div class="col-sm-12 col-md-6">
-            <div class="payment">
+            <!-- <div class="payment">
               <span><img src="/images/payments/1.png" alt=""></span>
               <span><img src="/images/payments/2.png" alt=""></span>
               <span><img src="/images/payments/3.png" alt=""></span>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>

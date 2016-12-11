@@ -463,8 +463,8 @@ HEADER
     padding: 47px 0;
 }
 .top-bar-left .logo{
-    padding-left: 100px;
-    padding-right: 100px;
+    /*/padding-left: 100px;*/
+    /*padding-right: 100px;*/
     background-color: #fff;
 }
 .top-bar-left .form-search-wapper{
@@ -508,9 +508,7 @@ HEADER
     padding: 0;
     margin: 0;
     display: table;
-    border-right-width:1px;
-    border-right-style: solid;
-    border-right-color: rgba(56,56,56,0.6);
+    font-size: 1.5em!important;
     float: left;
 }
 .top-bar-menu.right{
@@ -526,10 +524,10 @@ HEADER
 }
 .top-bar-menu>li>a{
     display: inline-block;
-    padding: 57px 60px;
-    font-size: 13px;
-    color: #eee;
-    font-family: 'Montserrat';
+    padding: 94px 60px;
+    font-size: 1.5em!important;
+    color: #000;
+    font-family: sans-serif;
 }
 .top-bar-menu>li>a .menu-icon{
     font-size: 14px;

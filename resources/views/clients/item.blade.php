@@ -16,7 +16,7 @@
     <div class="quantity">
       <form class="item-form-update">
         {{ csrf_field() }}
-        <input type="number" data-step="1" data-min="0" data-max="{{ $item->product->stock }}" value="{{ $item->quantity }}" name="quantity" class="input-text qty text" size="4">
+        <input type="number" data-step="1" min="0" value="{{ $item->quantity }}" name="quantity" class="input-text qty text" size="4">
         <input type="hidden" name="item_id" value="{{ $item->id }}" />
         <button type="submit"><i class="glyphicon glyphicon-floppy-disk"></i></button>
       </form>

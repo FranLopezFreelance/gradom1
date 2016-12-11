@@ -20,6 +20,9 @@ class CreateProductsTable extends Migration
             $table->integer('section_id');
             $table->integer('group_id');
             $table->integer('color_id');
+            $table->integer('increse_id');
+            $table->string('barra');
+            $table->string('fact');
             $table->float('price');
             $table->integer('stock');
             $table->integer('order');

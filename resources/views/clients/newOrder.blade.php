@@ -22,21 +22,18 @@
 						Nuevo Pedido (N°: {{ $order->id }})
 					</nav>
 					<div class="page-bar-right">
-						<!-- <form class="woocommerce-ordering">
-							<select name="orderby" class="orderby" style="display: none;">
-								<option value="menu_order" selected="selected">Default sorting</option>
-								<option value="popularity">Sort by popularity</option>
-								<option value="rating">Sort by average rating</option>
-								<option value="date">Sort by newness</option>
-								<option value="price">Sort by price: low to high</option>
-								<option value="price-desc">Sort by price: high to low</option>
+							<select>
+								<option value="menu_order" selected="selected">Elegir color...</option>
+									@foreach($colors as $color)
+										<option value="{{ $color->id }}">{{ $color->name }}</option>
+									@endforeach
 							</select>
-						</form> -->
-						<!-- <div class="shop-display-mode">
-				        <span class="label-filter">View as:</span>
-				        <a data-mode="list" class="display-mode" href="#"><i class="fa fa-th-list"></i></a>
-				        <a data-mode="grid" class="display-mode active" href="#"><i class="fa fa-th-large"></i></a>
-				    </div> -->
+							<select>
+ 							 <option value="menu_order" selected="selected">Elegir aumento...</option>
+ 								 @foreach($increases as $increase)
+ 									 <option value="{{ $increase->id }}">{{ $increase->name }}</option>
+ 								 @endforeach
+ 						 </select>
 					</div>
 				</div>
           <ul class="products product-list-grid desktop-columns-4 tablet-columns-2 mobile-columns-1">

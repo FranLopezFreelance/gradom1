@@ -19,8 +19,8 @@ class Section extends Model
       return $this->belongsTo('App\Section', 'section_id');
   }
 
-  public function image(){
-      return $this->belongsTo('App\Sectimage');
+  public function images(){
+      return $this->hasMany('App\Sectimage');
   }
 
   public function productsInOrder($order, $id){

@@ -21,6 +21,11 @@ class Product extends Model
           return $this->belongsTo('App\Color');
       }
 
+      public function increase()
+      {
+          return $this->belongsTo('App\Increase');
+      }
+
       public function images()
       {
           return $this->hasMany('App\Image');
@@ -28,8 +33,13 @@ class Product extends Model
 
       public function description()
       {
-          $description = explode('/', $this->description);
-          return $description;
+          if($this->description){
+            $description = explode('.', $this->description);
+            return $description;
+          }else{
+            return "Sin decripción.";
+          }
+
       }
 
       public function price()

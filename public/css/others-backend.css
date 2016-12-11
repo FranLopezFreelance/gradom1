@@ -1,0 +1,9 @@
+.product-backend {
+  padding-top: 15px;
+  margin-bottom: 5px;
+}
+
+.product-backend:hover {
+  background-color: #E0F2F7;
+  margin-bottom: 5px;
+}

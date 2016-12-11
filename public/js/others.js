@@ -241,3 +241,17 @@
         return num;
       }
     }
+
+
+  $(document).ready(function(){
+    	var altura = 260;
+
+    	$(window).on('scroll', function(){
+    		if ( $(window).scrollTop() > altura ){
+    			$('.widget_product_categories').addClass('sections-fixed');
+    		} else {
+    			$('.widget_product_categories').removeClass('sections-fixed');
+    		}
+    	});
+
+    });

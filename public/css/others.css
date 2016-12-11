@@ -7,8 +7,17 @@
   border: 1px solid grey;
 }
 
+.close {
+  padding: 0px 16px!important;
+}
+
 .product-form {
   margin-top: 6px;
+}
+
+.sections-fixed {
+  position: fixed;
+  top: 50px;
 }
 
 .view-order {

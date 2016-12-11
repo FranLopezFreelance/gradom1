@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Color;
 use App\Order;
 use App\Item;
+use App\Increase;
 use App\Product;
 use App\Section;
 
@@ -25,9 +27,11 @@ class ClientsController extends Controller
     public function create(Section $section)
     {
         $sections = Section::all();
+        $colors = Color::all();
+        $increases = Increase::all();
         $user = Auth::user();
         if($order = $user->orders()->where('state', 1)->first()){
-          return view('clients.newOrder', compact('sections', 'section', 'order'));
+          return view('clients.newOrder', compact('sections', 'section', 'order', 'colors', 'increases'));
         }else{
           $order = new Order([
             'state' => 1,

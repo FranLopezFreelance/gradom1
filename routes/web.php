@@ -32,6 +32,10 @@ Route::get('/orderConfirm/deliveredOrders', 'ClientsController@deliveredOrders')
 Route::get('/orderConfirm/deliverOrder/{order}', 'ClientsController@deliverOrder');
 Route::get('/orderConfirm/deleteOrder/{order}', 'ClientsController@deleteOrder');
 
+/*BACKEND ROUTES*/
+Route::get('/backend/products/{section}', 'ProductsController@index');
+Route::get('/backend/products/edit/{product}', 'ProductsController@edit');
+
 /* AUTH ROUTES */
 Auth::routes();
 

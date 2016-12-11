@@ -4,7 +4,7 @@
 					<ul class="kt-nav main-menu clone-main-menu">
 						<li>
 							<h3>Total: $ <span class="totalOrderNav_{{ $order->id }}">{{ $order->total() }}</span>
-								<a class="btn btn-warning btn-sm view-order" href="/order/newOrder/{{ $order->id }}">Volver al Pedido</a>
+								<a class="btn btn-warning btn-sm view-order" href="/order/newOrder/1">Volver al Pedido</a>
 							</h3>
 						</li>
 					</ul>
