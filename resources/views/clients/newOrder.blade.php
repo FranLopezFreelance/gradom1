@@ -22,7 +22,7 @@
 						Nuevo Pedido (N°: {{ $order->id }})
 					</nav>
 					<div class="page-bar-right">
-							<select>
+							<!-- <select>
 								<option value="menu_order" selected="selected">Elegir color...</option>
 									@foreach($colors as $color)
 										<option value="{{ $color->id }}">{{ $color->name }}</option>
@@ -33,7 +33,7 @@
  								 @foreach($increases as $increase)
  									 <option value="{{ $increase->id }}">{{ $increase->name }}</option>
  								 @endforeach
- 						 </select>
+ 						 </select> -->
 					</div>
 				</div>
           <ul class="products product-list-grid desktop-columns-4 tablet-columns-2 mobile-columns-1">

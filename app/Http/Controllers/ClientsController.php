@@ -26,7 +26,7 @@ class ClientsController extends Controller
 
     public function create(Section $section)
     {
-        $sections = Section::all();
+        $sections = Section::where('active', 1)->get();
         $colors = Color::all();
         $increases = Increase::all();
         $user = Auth::user();

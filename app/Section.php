@@ -23,6 +23,12 @@ class Section extends Model
       return $this->hasMany('App\Sectimage');
   }
 
+  public function description(){
+      $text = '';
+      $textParagraphs = explode('/', $this->description);
+      return $textParagraphs;
+  }
+
   public function productsInOrder($order, $id){
     $total = 0;
     foreach($order->items as $item){

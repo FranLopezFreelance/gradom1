@@ -12,6 +12,11 @@
   <div class="heading-section style2 text-center margin-top-50 margin-bottom-20" >
     <h3 class="title">GRADOM</h3>
     <span class="subtitle">Accesorios de Belleza</span>
+    <div class="section-description">
+      @foreach($about->description() as $text)
+        <p>{{ $text }}</p>
+      @endforeach
+    </div>
   </div>
   <div class="section-team">
     <div class="container">
@@ -89,30 +94,16 @@
         <h3 class="title">NUESTROS CLIENTES DICEN...</h3>
       </div>
       <div class="testimonials owl-carousel nav-center nav-style-3" data-loop="true" data-nav="true" data-dots="false" data-items="1" data-autoplay="true">
-        <div class="testimonial">
-          <div class="inner">
-            <div class="text">
-              <p>Mauris eu euismod tellus curabitur a neque in nulla iaculis facilisis. Proin sit amet semper justo, eget lacinia nulla. Nullam ante purusauctor in felis.</p>
+        @foreach($comments as $comment)
+          <div class="testimonial">
+            <div class="inner">
+              <div class="text comment">
+                  <p>{{ $comment->comment }}</p>
+              </div>
+              <!-- <span class="name">John Doe - CEO Apple</span> -->
             </div>
-            <span class="name">John Doe - CEO Apple</span>
           </div>
-        </div>
-        <div class="testimonial">
-          <div class="inner">
-            <div class="text">
-              <p>Mauris eu euismod tellus curabitur a neque in nulla iaculis facilisis. Proin sit amet semper justo, eget lacinia nulla. Nullam ante purusauctor in felis.</p>
-            </div>
-            <span class="name">John Doe - CEO Apple</span>
-          </div>
-        </div>
-        <div class="testimonial">
-          <div class="inner">
-            <div class="text">
-              <p>Mauris eu euismod tellus curabitur a neque in nulla iaculis facilisis. Proin sit amet semper justo, eget lacinia nulla. Nullam ante purusauctor in felis.</p>
-            </div>
-            <span class="name">John Doe - CEO Apple</span>
-          </div>
-        </div>
+        @endforeach
       </div>
     </div>
   </div>

@@ -20,6 +20,21 @@
   top: 50px;
 }
 
+.section-description {
+  margin: 20px auto;
+  text-align: left;
+  width: 80%;
+  border-radius: 10px;
+  border: 1px solid silver;
+  font-size: 1.4em;
+  padding: 40px 80px;
+  font-family: sans-serif;
+}
+
+.comment {
+  font-size: 1.6em!important;
+}
+
 .view-order {
     margin-bottom: 15px!important;
 }
